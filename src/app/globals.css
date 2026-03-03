@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --red-primary: #e31221;
+    --red-dark: #c20e1a;
+    --white: #ffffff;
+    --black: #0a0a0a;
+    --gray-light: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--red-primary);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 5%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 5%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 5%;
+        --primary: 354 88% 48%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 96%;
+        --secondary-foreground: 0 0% 5%;
+        --muted: 0 0% 96%;
+        --muted-foreground: 0 0% 45%;
+        --accent: 0 0% 96%;
+        --accent-foreground: 0 0% 5%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 90%;
+        --input: 0 0% 90%;
+        --ring: 354 88% 48%;
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 354 88% 48%;
+        --foreground: 0 0% 100%;
+        --card: 354 88% 40%;
+        --card-foreground: 0 0% 100%;
+        --popover: 354 88% 40%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 0 0% 100%;
+        --primary-foreground: 354 88% 48%;
+        --secondary: 354 80% 40%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 354 80% 40%;
+        --muted-foreground: 0 0% 80%;
+        --accent: 354 80% 40%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 354 70% 50%;
+        --input: 354 70% 50%;
+        --ring: 0 0% 100%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--red-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+    border-radius: 4px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #e0e0e0;
+    }
+
+/* Section styling */
+.section-title {
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+/* Placeholder image styling */
+.placeholder-image {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border: 2px dashed rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
